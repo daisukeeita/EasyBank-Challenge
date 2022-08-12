@@ -1,0 +1,29 @@
+// https://accessiblepalette.com/?lightness=98.2,93.9,85,76.2,68,57.8,48,40.2,31.8,24.9&31D35C=0,0&2BB7DA=0,0&2D314D=0,0&FAFAFA=0,0&9698A6=0,15&F3F4F6=0,0&FFFFFF=0,-10
+
+// clr-primary-400
+// clr-secondary-400
+// clr-accent-400
+// clr-neutral-400
+
+// Primary Colors
+$primary-color-pallete-400: linear-gradient(to right, #2CBE53, #2AB4D6);
+$primary-color-pallete-300: #40D668;
+$primary-color-pallete-200: linear-gradient(to right, #90E7A7, #9FDEEE);
+
+$font-color-on-primary-50: #FAFAFA;
+
+$font-color-on-background-300: #BABBC5;
+$font-color-on-background-400: #A3A5B1;
+$font-color-on-background-500: #888A9A;
+$font-color-on-background-600: #6E7184;
+$font-color-on-background-900: #363955;
+
+$font-color-on-hover: $primary-color-pallete-300;
+
+
+// Neutral Colors
+$neutral-color-background-50: #FFFFFF;
+$neutral-color-background-100: #FAFAFA;
+$neutral-color-background-200: #F9FAFB;
+$neutral-color-background-300: #F3F4F6;
+

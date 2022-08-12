@@ -1,0 +1,91 @@
+@use '../abstract/color' as *;
+@use '../abstract/breakpoints' as *;
+@use '../abstract/font' as *;
+
+.features {
+    background-color: $neutral-color-background-300;
+
+    @include breakpoint-down(medium) {
+        text-align: center;
+        padding-block: 65px;
+        padding-inline: 30px;
+    }
+
+    @include breakpoint-up(medium) {
+        padding-block: 110px;
+        padding-inline: 20px;
+    }
+
+    &__heading {
+
+        @include breakpoint-down(medium) {
+            padding-bottom: 1.25rem;
+            padding-inline: 2.375rem;
+            letter-spacing: -1px;
+            line-height: 1.2;
+        }
+
+        @include breakpoint-up (medium) {
+            padding-inline: 27px;
+        }
+    }
+
+    &__description {
+        margin-bottom: 60px;
+        line-height: 1.7;
+
+        @include breakpoint-up (medium) {
+            padding-inline: 27px;
+        }
+    }
+
+    &__item-container {
+
+        @include breakpoint-up (medium) {
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            gap: 35px 0;
+        }
+    }
+
+    &__item {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+        @include breakpoint-down(medium) {
+            &:not(:last-child) {
+                margin-bottom: 35px;
+            }
+        }
+
+        @include breakpoint-up(medium) {
+            justify-content: space-between;
+            align-items: flex-start;
+            padding-inline: 27px;
+            flex-basis: 50%;
+        }
+
+        @include breakpoint-up (large) {
+            flex-basis: 25%;
+        }
+    
+    }
+
+    &__icon {
+        margin-bottom: 20px;
+    }
+
+    &__item-title {
+        font-size: $font-size-item-title;
+        font-weight: $font-weight-item-title;
+        color: $font-color-on-background-900;
+        margin-bottom: 25px;
+    }
+
+    &__item-description {
+        font-size: $font-size-feature-description;
+    }
+}

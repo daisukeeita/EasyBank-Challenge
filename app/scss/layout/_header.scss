@@ -1,0 +1,8 @@
+@use '../abstract/color' as *;
+
+.header {
+    height:   5em;
+    z-index:  10;
+    position: relative;
+    background-color: $neutral-color-background-50;
+}

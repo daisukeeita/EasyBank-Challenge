@@ -1,0 +1,31 @@
+@use '../abstract/breakpoints' as *;
+
+.default-container {
+    max-width: 1110px;
+    margin: 0 auto;
+}
+
+
+.hero__container {
+
+    @include breakpoint-up(medium) {
+        max-width: 1440px;
+        margin: 0 auto;
+    }
+}
+
+.hero__grid-system {
+
+    @include breakpoint-up(medium) {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+
+    @include breakpoint-up(large) {
+        grid-template-columns: 517px 1fr;
+    }
+
+    @include breakpoint-up(x-large) {
+        grid-template-columns: 684px 1fr;
+    }
+}

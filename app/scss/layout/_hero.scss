@@ -1,0 +1,97 @@
+@use '../abstract/color' as *;
+@use '../abstract/breakpoints' as *;
+
+.hero {
+    background-color: $neutral-color-background-100;
+
+    &__img-container {
+        position: relative;
+        height: 306px;
+        background: url(/images/bg-intro-mobile.svg);
+        background-position: center;
+        background-size: cover;
+        background-repeat: no-repeat;
+
+        @include breakpoint-up (medium) {
+            order: 2;
+            height: 590px;
+            background: url(/images/bg-intro-desktop.svg);
+            background-position: -68px -85px;
+            background-size: 896px;
+            background-repeat: no-repeat;
+        }
+
+        @include breakpoint-up (large) {
+            height: 655px;
+            margin-right: -26.5625rem;
+            background-size: 1246px;
+            background-position: -70px -261px;
+            background-repeat: no-repeat;
+        }
+    }
+
+    &__image {
+        position: absolute;
+        top:      -7.8rem;
+        left:      50%;
+        width:     366px;
+        margin:    0 auto;
+        transform: translateX(-50%);
+
+        @include breakpoint-up(medium) {
+            top:       2px;
+            left:      237px;
+            min-width: 500px;
+        }
+
+        @include breakpoint-up(large) {
+            top:      -115px;
+            left:      512px;
+            min-width: 712px;
+        }
+    }
+
+    &__text-container {
+        text-align:     center;
+        padding: 45px 30px 80px;
+
+        @include breakpoint-up(medium) {
+            display:         flex;
+            text-align:      left;
+            flex-direction:  column;
+            justify-content: center;
+            padding-left:    20px;
+            padding-right:   15%;
+            padding-block:   0;
+            
+        }
+
+        @include breakpoint-up(large) {
+            padding-left:  13%;
+            padding-right: 90px;
+        }
+
+        @include breakpoint-up(x-large) {
+            padding-left:  166px;
+            padding-right: 72px;
+        }
+    }
+
+    &__heading {
+        margin-bottom:   30px;
+        letter-spacing: -2px;
+
+        @include breakpoint-up(medium) {
+            margin-bottom: 40px;
+        }
+    }
+    
+    &__description {
+        line-height:   1.5;
+        margin-bottom: 35px;
+
+        @include breakpoint-up(medium) {
+            margin-bottom: 40px;
+        }
+    }
+}

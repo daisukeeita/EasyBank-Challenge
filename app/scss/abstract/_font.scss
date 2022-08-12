@@ -1,0 +1,39 @@
+$primary-font-family: 'Public Sans', sans-serif;
+
+$fw-light: 300;
+$fw-regular: 400;
+$fw-bold: 700;
+
+$fs-200: 0.633rem; // 10.128px
+$fs-300: 0.844rem; // 13.504px
+$fs-400: 1.125rem; //18px
+$fs-500: 1.5rem; // 24px
+$fs-600: 1.999rem; // 32px
+$fs-700: 2.665rem; // 42.635px
+$fs-800: 3.552rem; // 56.832px
+$fs-900: 4.735rem; // 75.757px
+
+$font-family-body: $primary-font-family;
+$font-family-primary-heading: $primary-font-family;
+$font-family-secondary-heading: $primary-font-family;
+
+$font-weight-body: $fw-regular;
+$font-weight-primary-heading: $fw-light;
+$font-weight-secondary-heading: $fw-regular;
+$font-weight-button: $fw-bold;
+$font-weight-navigation: $fw-regular;
+$font-weight-item-title: $fw-regular;
+
+    /* 0.84375rem(13.5px) @ 23.4375rem(375px) increasing to 1.125rem(18px) @ 90rem(1440px) */
+$font-size-body: clamp(0.84375rem, calc(0.84375rem + (1.125 - 0.84375) * ((100vw - 23.4375rem) / (90 - 23.4375))), 1.125rem);
+    /* Where: calc = min_font_size_in_rem + (max_font_size - min_font_size) * ((100vw - min_viewport_including_rem_unit) / (max_viewport - min_viewport)) */
+$font-size-primary-heading: clamp(2rem, calc(2rem + ((1vw - 0.234375rem) * 2.3316)), 3.552rem);
+$font-size-secondary-heading: clamp(1.5rem, calc(1.5rem + ((1vw - 0.23437000000000002rem) * 0.7497)), 1.999rem);
+
+$font-size-article-author: $fs-200;
+
+$font-size-item-title: $fs-400;
+$font-size-feature-description: $fs-300;
+$font-size-navigation: $fs-300;
+$font-size-navigation-mobile: $fs-400;
+$font-size-button: $fs-300;

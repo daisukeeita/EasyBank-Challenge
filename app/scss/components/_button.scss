@@ -1,0 +1,36 @@
+@use '../abstract/color' as *;
+@use '../abstract/font' as *;
+
+.call-to-action {
+    display: inline-block;
+    position: relative;
+    // width: 150px;
+    padding-block: 16px;
+    padding-inline: 34px;
+    border-radius: 50px;
+    background: $primary-color-pallete-400;
+    font-size: $font-size-button;
+    font-weight: $font-weight-button;
+    color: $font-color-on-primary-50;
+    z-index: 1;
+    transition: all 300ms linear;
+
+    &::before {
+        position: absolute;
+        content: "";
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        z-index: -1;
+        opacity: 0;
+        transition: opacity 300ms;
+        border-radius: inherit;
+        background: $primary-color-pallete-200;
+    }
+
+    &:hover::before {
+        opacity: 1;
+    }
+}
+
